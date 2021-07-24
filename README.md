@@ -1,4 +1,4 @@
-# Howto
+# OsmAnd A/V Notes to JOSM converter
 When you have recorded pictures and sounds from OsmAnd (see https://osmand.net/features/audio-video-notes-plugin )
 you will see a folder similar to this example:
 ![File example](files.png)
