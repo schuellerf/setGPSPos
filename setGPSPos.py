@@ -45,7 +45,6 @@ def decodeAndGetWPT(filename, symbol=None):
         x <<= 3
         y <<= 3
         for j in range(2, -1, -1):
-            print(j)
             x |= 0 if ((digit & (1 << (j + j + 1))) == 0) else (1 << j)
             y |= 0 if ((digit & (1 << (j + j))) == 0) else (1 << j)
         z += 3;
@@ -71,9 +70,14 @@ for p in patterns:
 
 gpx = gpxpy.gpx.GPX()
 
+n = len(files)
+i = 0
 for f in files:
+    i += 1
+    print(f"({i}/{n}) Adding {f} to GPX file... ", end='')
     for p in patterns:
         if fnmatch.fnmatch(f,p[0]):
             gpx.waypoints.append(decodeAndGetWPT(f,p[1]))
+    print("done")
 
 open("avnotes.gpx", 'w').write(gpx.to_xml())
