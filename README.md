@@ -1,6 +1,7 @@
 # OsmAnd A/V Notes to JOSM converter
 When you have recorded pictures and sounds from OsmAnd (see [https://osmand.net/features/audio-video-notes-plugin](https://osmand.net/features/audio-video-notes-plugin) )
 you will see a folder similar to this example:
+
 ![File example](files.png)
 
 Copy the file setGPSPos.py in this folder and execute it with python 3.
